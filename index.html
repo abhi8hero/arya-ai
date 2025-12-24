@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arya AI</title>
+
+  <!-- Gradio Web Component -->
+  <script
+    type="module"
+    src="https://gradio.s3-us-west-2.amazonaws.com/6.2.0/gradio.js">
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-dark: #020617;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+  color: #1e90ff;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  text-align: center;        /* center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.tagline {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.35;
+}
+
+
+    /* ---------- MAIN ---------- */
+/* Kill all width limits inside Gradio */
+.gradio-container,
+.container,
+.wrap,
+main {
+  max-width: 100% !important;
+  width: 100% !important;
+   flex: 1;
+      overflow: hidden;
+}
+
+
+/* Force Gradio app to use full width */
+gradio-app {
+  width: 100%;
+  display: block;
+}
+
+/* Remove Gradio's internal max-width */
+gradio-app iframe {
+  width: 100% !important;
+  min-height: 100vh;
+}
+
+/* Target Gradio container inside iframe */
+:root {
+  --gradio-container-max-width: 100% !important;
+}
+
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      height: 48px;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid #1e293b;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 4px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="brand">
+    <h1>Arya AI</h1>
+    <p class="tagline">
+      Powered by Google Gemini. A powerful artificial intelligence chatbot for all your curiosity.
+    </p>
+  </div>
+</header>
+
+
+  <!-- Main App -->
+  <main>
+    <gradio-app src="https://abhi-the-great-arya-ai.hf.space"></gradio-app>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Developed by <strong><a href="#">Abhi The Great</a></strong> 
+  </footer>
+
+</body>
+</html>
