@@ -17,7 +17,9 @@ This project was built to explore AI integration, user experience design, and re
 
 
 ## 📸 Screenshots
-<img width="1919" height="910" alt="image" src="https://github.com/user-attachments/assets/4fec3b1d-49aa-4a41-a521-b36d1ba904d2" />
+<img width="1919" height="846" alt="image" src="https://github.com/user-attachments/assets/aa31257d-df0b-495c-b2e1-850b8634c228" />
+<img width="1919" height="845" alt="image" src="https://github.com/user-attachments/assets/0cd67633-0d2f-4f1d-b43e-275305de2fbb" />
+
 
 
 ## ✨ Features
